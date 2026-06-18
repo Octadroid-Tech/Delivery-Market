@@ -1,7 +1,9 @@
+import Navbar from "./components/Navbar/NavBar";
+
 function App() {
   return (
     <>
-      <h1>Delivery Market</h1>
+      <Navbar />
     </>
   );
 }
