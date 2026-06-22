@@ -121,3 +121,9 @@
 .navbar-menu button:hover {
   background: var( --verde-claro);
 }
+
+.btn.active{
+  background: var(--verde-principal);
+
+  color: #fff;
+}

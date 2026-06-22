@@ -1,8 +1,9 @@
+import {useState} from "react";
 import "./Navbar.css";
-
 import { Search, ShoppingCart, User } from "lucide-react";
 
 function Navbar() {
+  const [active, setActive] = useState("products");
   return (
     <header className="navbar">
 
@@ -31,13 +32,19 @@ function Navbar() {
 
       <nav className="navbar-menu">
 
-        <button>
+        <button
+          className={`btn ${active === "products" ? "active" : ""}`}
+          onClick={() => setActive("products")}
+        >
 
           Produtos
 
         </button>
 
-        <button>
+        <button
+          className={`btn ${active === "orders" ? "active" : ""}`}
+          onClick={() => setActive("orders")}
+        >
 
           <ShoppingCart size={20} />
 
@@ -45,7 +52,10 @@ function Navbar() {
 
         </button>
 
-        <button>
+        <button
+          className={`btn ${active === "account" ? "active" : ""}`}
+          onClick={() => setActive("account")}
+        >
 
           <User size={20} />
 
